@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Upsell & Cross-Sell Rules Engine</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
+
+    body {
+      font-family: 'Space Mono', monospace;
+      background: white;
+      color: black;
+      max-width: 900px;
+      margin: 60px auto;
+      padding: 0 20px;
+      line-height: 1.7;
+      font-size: 17px;
+    }
+
+    h1 {
+      color: #0066FF;
+      font-size: 2.4em;
+      border-bottom: 4px solid #0066FF;
+      padding-bottom: 15px;
+      margin-bottom: 40px;
+    }
+
+    h2 {
+      color: #0066FF;
+      font-size: 1.8em;
+      margin-top: 3em;
+      border-bottom: 2px solid #0066FF;
+      padding-bottom: 8px;
+    }
+
+    h3 {
+      color: #0066FF;
+      font-size: 1.4em;
+      margin-top: 2.5em;
+    }
+
+    p, ul, ol, li {
+      margin-bottom: 1.2em;
+    }
+
+    ul, ol {
+      padding-left: 2em;
+    }
+
+    a {
+      color: #0066FF;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      margin: 30px 0;
+    }
+
+    th, td {
+      border: 1px solid #ccc;
+      padding: 12px;
+      text-align: left;
+    }
+
+    th {
+      background: #f0f8ff;
+      color: #0066FF;
+      font-weight: 700;
+    }
+
+    .back {
+      margin-top: 60px;
+      padding-top: 30px;
+      border-top: 2px solid #0066FF;
+    }
+  </style>
+</head>
+<body>
+
+<h1>Upsell & Cross-Sell Rules Engine</h1>
+
+<p>This document defines the complete rules engine for proactive revenue optimization during medical imaging device configuration. The logic is designed to be implemented in the Dialogflow CX fulfillment webhook (Cloud Functions). Rules are triggered contextually based on current session parameters and follow enterprise sales best practices: value-based, non-aggressive, and data-driven recommendations.</p>
+
+<h2>Core Principles</h2>
+<ul>
+  <li>Recommendations are <strong>contextual</strong> — only triggered when relevant to the current configuration.</li>
+  <li>Phrasing uses <strong>social proof</strong> ("Most customers with this setup...") and <strong>value justification</strong>.</li>
+  <li>Recommendations are <strong>optional</strong> — user can decline without blocking flow.</li>
+  <li>Multiple rules can fire in sequence if applicable.</li>
+  <li>Priority order: Safety/Compliance → Performance Optimization → Operational Efficiency → Additional Services.</li>
+</ul>
+
+<h2>Rule Definitions (Prioritized)</h2>
+
+<h3>Rule 1: MRI Quench Pipe (Mandatory – Enforced as Required Add-on)</h3>
+<ul>
+  <li><strong>Trigger</strong>: Modality = MRI (any field strength)</li>
+  <li><strong>Action</strong>: Automatically add Quench Pipe (+$80,000)</li>
+  <li><strong>Agent Message</strong>: "For safety compliance, all MRI systems include a quench pipe for emergency venting (+$80,000)."</li>
+  <li><strong>Type</strong>: Required (not upsell, but transparent inclusion)</li>
+</ul>
+
+<h3>Rule 2: Radiation Shielding for CT/X-Ray (Mandatory)</h3>
+<ul>
+  <li><strong>Trigger</strong>: Modality = CT Scanner or Digital X-Ray</li>
+  <li><strong>Action</strong>: Automatically add Radiation Shielding (+$150,000)</li>
+  <li><strong>Agent Message</strong>: "Radiation shielding is required for all CT and X-Ray installations (+$150,000)."</li>
+  <li><strong>Type</strong>: Required</li>
+</ul>
+
+<h3>Rule 3: Performance Tier Upgrade for High-End Imaging</h3>
+<ul>
+  <li><strong>Trigger</strong>: User selects 3T MRI or 256-slice CT</li>
+  <li><strong>Current Tier</strong>: Standard or Advanced</li>
+  <li><strong>Action</strong>: Prompt upgrade to Premium Research tier (+$600,000 from base)</li>
+  <li><strong>Agent Message</strong>: "The [3T MRI / 256-slice CT] delivers optimal performance with our Premium Research tier. Shall I upgrade your configuration (+$600,000)?"</li>
+  <li><strong>Rationale</strong>: Technical requirement for full capability and safety margins</li>
+</ul>
+
+<h3>Rule 4: AI Diagnostics Suite Recommendation</h3>
+<ul>
+  <li><strong>Trigger</strong>: Modality = MRI (3T) or CT (128+ slice), OR any oncology/cardiac/neurology-related software selected</li>
+  <li><strong>Action</strong>: Recommend AI Diagnostics Suite (+$250,000)</li>
+  <li><strong>Agent Message</strong>: "82% of facilities with advanced imaging systems adopt our AI Diagnostics Suite for automated anomaly detection and workflow efficiency. Would you like to include it (+$250,000)?"</li>
+  <li><strong>Acceptance Weight</strong>: High (clinical productivity gain)</li>
+</ul>
+
+<h3>Rule 5: Premium Care & Uptime Guarantee for Critical Systems</h3>
+<ul>
+  <li><strong>Trigger</strong>: 3T MRI, 256-slice CT, or Premium Research tier selected, OR Oncology Workflow or Cardiac Analysis module added</li>
+  <li><strong>Action</strong>: Recommend Premium Care 3-year + Uptime Guarantee SLA</li>
+  <li><strong>Agent Message</strong>: "For systems used in critical diagnosis or research, most institutions choose our Premium Care package with 99.9% uptime guarantee and 24×7 support (+$480,000/year combined). Shall I include this for operational continuity?"</li>
+  <li><strong>Rationale</strong>: Minimizes downtime risk in high-stakes environments</li>
+</ul>
+
+<h3>Rule 6: Remote Monitoring & Predictive Maintenance</h3>
+<ul>
+  <li><strong>Trigger</strong>: Capital cost > $2,000,000 or Premium Research tier</li>
+  <li><strong>Action</strong>: Recommend Remote Monitoring service (+$120,000/year)</li>
+  <li><strong>Agent Message</strong>: "Our Remote Monitoring and Predictive Maintenance service reduces unplanned downtime by up to 40% on high-value systems. Would you like to add it (+$120,000/year)?"</li>
+  <li><strong>Rationale</strong>: ROI-driven for expensive assets</li>
+</ul>
+
+<h3>Rule 7: Clinical Training & Certification Package</h3>
+<ul>
+  <li><strong>Trigger</strong>: Any AI-enhanced software package selected</li>
+  <li><strong>Action</strong>: Recommend Training Package (+$75,000)</li>
+  <li><strong>Agent Message</strong>: "To maximize clinical value from the AI modules, we offer a comprehensive staff training and certification program. Most customers include this — interested (+$75,000)?"</li>
+  <li><strong>Rationale</strong>: Ensures adoption and accuracy</li>
+</ul>
+
+<h3>Rule 8: Research Collaboration Portal</h3>
+<ul>
+  <li><strong>Trigger</strong>: Premium Research tier + any research-oriented software</li>
+  <li><strong>Action</strong>: Recommend Research Collaboration Portal (+$50,000/year)</li>
+  <li><strong>Agent Message</strong>: "The Research Collaboration Portal enables secure multi-site data sharing and standardized protocols — proven to accelerate publication timelines. Shall I include access (+$50,000/year)?"</li>
+  <li><strong>Target</strong>: Academic medical centers and clinical trial sites</li>
+</ul>
+
+<h3>Rule 9: Portable Deployment Accessories</h3>
+<ul>
+  <li><strong>Trigger</strong>: Performance Tier = Portable (Ultrasound or X-Ray)</li>
+  <li><strong>Action</strong>: Recommend Extended Battery & Transport Case (+$25,000)</li>
+  <li><strong>Agent Message</strong>: "For field and rural deployments, customers typically add the Extended Battery and rugged Transport Case for reliability (+$25,000). Would you like to include this?"</li>
+  <li><strong>Rationale</strong>: Practical necessity for mobile use</li>
+</ul>
+
+<h3>Rule 10: Volume Discount Prompt</h3>
+<ul>
+  <li><strong>Trigger</strong>: Quantity ≥ 2 units (any modality)</li>
+  <li><strong>Action</strong>: Inform of tiered volume pricing</li>
+  <li><strong>Agent Message</strong>: "For multiple units, we offer progressive volume discounts. Your current quantity of [X] qualifies for [Y]% savings. Would you like to configure additional systems?"</li>
+</ul>
+
+<h2>Implementation Notes for Webhook</h2>
+<ul>
+  <li>Rules evaluated in priority order after each attribute change.</li>
+  <li>Use session parameters to track:
+    <ul>
+      <li><code>triggered_rules</code> (array to prevent repeats)</li>
+      <li><code>recommendation_accepted</code> (boolean per rule)</li>
+      <li><code>current_price_capital</code> and <code>current_price_annual</code></li>
+    </ul>
+  </li>
+  <li>Vertex AI Gemini used only for natural phrasing variations (not decision logic).</li>
+  <li>All monetary values stored as integers (cents) to avoid floating-point errors.</li>
+</ul>
+
+<p>This rules engine transforms the agent from a passive configurator into an active, value-driven sales partner — increasing average order value while maintaining clinical credibility and trust.</p>
+
+<div class="back">
+  <a href="index.html">← Back to Main Design</a>
+</div>
+
+</body>
+</html>
