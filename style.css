@@ -1,0 +1,132 @@
+/* ==========================================================================
+   GOLD STANDARD ENTERPRISE CSS - Siddarth Rao Portfolio
+   Optimized for: TOGAF EA / GCP Cloud Arch / GenAI Leader
+   ========================================================================== */
+
+   :root {
+    --google-blue: #0052cc;
+    --google-blue-light: #eef4ff;
+    --card-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    --border-grey: #e0e0e0;
+    --text-main: #333333;
+    --text-muted: #555555;
+    --bg-page: #f8f9fa;
+}
+
+body {
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    background-color: var(--bg-page);
+    color: var(--text-main);
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+/* 1. LAYOUT & BOX ALIGNMENT */
+.main-content {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px; /* Enforces spacing between card sections */
+}
+
+/* 2. THE GOLD STANDARD CARD LOOK */
+.section, .executive-summary, .conversation-container {
+    background: #ffffff;
+    border: 1px solid var(--border-grey);
+    border-radius: 8px;
+    padding: 30px;
+    box-shadow: var(--card-shadow);
+    display: block; /* Flattens the hierarchy */
+    clear: both;
+}
+
+/* 3. HEADER RIBBON STYLING */
+.header-ribbon {
+    background: white;
+    border-bottom: 1px solid var(--border-grey);
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header-ribbon nav {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    gap: 25px;
+    padding: 0 20px;
+}
+
+.header-ribbon a {
+    text-decoration: none;
+    color: var(--text-muted);
+    font-weight: 500;
+    font-size: 0.95rem;
+    padding-bottom: 5px;
+    border-bottom: 2px solid transparent;
+}
+
+.header-ribbon a.active, .header-ribbon a:hover {
+    color: var(--google-blue);
+    border-bottom: 2px solid var(--google-blue);
+}
+
+/* 4. TYPOGRAPHY & HEADINGS */
+h1 {
+    font-size: 2.2rem;
+    color: #1a237e;
+    margin-bottom: 10px;
+}
+
+h1 small {
+    display: block;
+    font-size: 1.1rem;
+    color: var(--google-blue);
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+h3 {
+    color: var(--google-blue);
+    margin-top: 0;
+    border-bottom: 2px solid var(--google-blue-light);
+    padding-bottom: 10px;
+}
+
+/* 5. AGENTIC REASONING TRACES (Sample Conversations Only) */
+.reasoning-box {
+    background: #263238;
+    color: #81d4fa;
+    padding: 20px;
+    border-radius: 8px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 0.85rem;
+    margin: 15px 0;
+    border-left: 4px solid var(--google-blue);
+}
+
+/* 6. RESPONSIVE UTILITIES */
+.project-description {
+    font-size: 1.1rem;
+    color: var(--text-muted);
+    max-width: 850px;
+}
+
+details {
+    background: white;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+details summary {
+    padding: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    background: #f8fafc;
+}
