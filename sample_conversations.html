@@ -1,205 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <title>Sample Conversations – Smart Configurator Sales Agent</title>
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
-
-    body {
-      font-family: 'Space Mono', monospace;
-      background: white;
-      color: black;
-      max-width: 900px;
-      margin: 60px auto;
-      padding: 0 20px;
-      line-height: 1.7;
-      font-size: 17px;
-    }
-
-    h1 {
-      color: #0066FF;
-      font-size: 2.4em;
-      border-bottom: 4px solid #0066FF;
-      padding-bottom: 15px;
-      margin-bottom: 40px;
-    }
-
-    h2 {
-      color: #0066FF;
-      font-size: 1.8em;
-      margin-top: 3em;
-      border-bottom: 2px solid #0066FF;
-      padding-bottom: 8px;
-    }
-
-    h3 {
-      color: #0066FF;
-      font-size: 1.4em;
-      margin-top: 2.5em;
-    }
-
-    strong {
-      color: #0066FF;
-    }
-
-    p, ul, ol, li {
-      margin-bottom: 1.2em;
-    }
-
-    ul, ol {
-      padding-left: 2em;
-    }
-
-    a {
-      color: #0066FF;
-      text-decoration: none;
-    }
-
-    a:hover {
-      text-decoration: underline;
-    }
-
-    .back {
-      margin-top: 60px;
-      padding-top: 30px;
-      border-top: 2px solid #0066FF;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversational Traces - Omni-CCAI</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
-<body>
+<body class="project-page">
+    <div class="home-nav-container">
+        <a href="ccai-sales-agent.html" class="btn-home">
+            <i class="fas fa-arrow-left"></i> Back to Design
+        </a>
+    </div>
 
-<h1>Sample Conversations – Smart Configurator Sales Agent</h1>
+    <div class="main-content">
+        <h1>Sales Orchestration: Conversational Traces<br>
+        <small>SURFACING AGENTIC REASONING, RULE ENFORCEMENT & DYNAMIC CPQ LOGIC</small></h1>
 
-<p>These example dialogues demonstrate the agent's ability to guide attribute-based configuration of a medical imaging device suite, enforce compatibility/validation rules, calculate dynamic pricing in real time, and proactively drive revenue through contextual upsell/cross-sell recommendations. All flows are designed to mirror real MedTech sales conversations while showcasing GCP Dialogflow CX capabilities.</p>
+        <p class="project-description">
+            These traces demonstrate the <strong>Omni-CCAI Reasoning Engine</strong>. Unlike basic chatbots, this agent maintains a complex session state, evaluating every user utterance against the <strong>MedTech Rules Engine</strong>. Each trace highlights the intersection of natural language, clinical validation, and proactive revenue generation.
+        </p>
 
-<h2>Conversation 1: Standard MRI Configuration with Rule Enforcement & Upsell</h2>
+        <section id="scenario-1" style="margin-bottom: 50px;">
+            <h3 style="color: #0066FF; border-left: 5px solid #0066FF; padding-left: 15px;">Scenario 1: High-Resolution MRI (Rule-Gated Upsell)</h3>
+            
+            <div class="conversation-container" style="background: #f8f9fa; border-radius: 12px; padding: 25px; border: 1px solid #ddd;">
+                <p><strong>User:</strong> "I need to configure a 3T MRI system for our research wing."</p>
+                
+                <div class="reasoning-box" style="background: #263238; color: #81d4fa; padding: 15px; border-radius: 8px; font-family: 'Courier New', monospace; font-size: 0.85rem; margin: 15px 0;">
+                    [Orchestrator]: Intent: 'product_config' | Entity: 'modality:MRI', 'strength:3T'<br>
+                    [Logic_Engine]: Checking Dependency: 3T MRI requires 'Premium Research' Tier.<br>
+                    [Upsell_Trigger]: AOV optimization: Facility with 3T frequently requires 'AI Diagnostics Suite'.
+                </div>
 
-<p><strong>User</strong>: Hi, I'm looking to purchase an MRI system for our community hospital.</p>
+                <p><strong>Agent:</strong> "Excellent choice. A 3T system provides the resolution needed for high-end research. To enable the 3T magnet, I've upgraded your configuration to the <strong>Premium Research Tier (+$600k)</strong>. Also, 82% of research sites with 3T systems include our <strong>AI Diagnostics Suite</strong> to automate tumor detection. Shall I add that to your quote?"</p>
+                
+                <p><strong>User:</strong> "Yes, add the AI suite."</p>
+                
+                <div class="reasoning-box" style="background: #263238; color: #81d4fa; padding: 15px; border-radius: 8px; font-family: 'Courier New', monospace; font-size: 0.85rem; margin: 15px 0;">
+                    [Logic_Engine]: Appending 'AI_Diagnostics_Suite' (+$250,000).<br>
+                    [Safety_Check]: MRI modality detected. Automatically injecting 'Quench_Pipe' (+$80,000) for compliance.
+                </div>
 
-<p><strong>Agent</strong>: Hello! I'd be happy to help you configure the right MRI system. To get started, are you looking for a standard clinical system, or do you have research needs as well?</p>
+                <p><strong>Agent:</strong> "Added. I've also included the mandatory <strong>Quench Pipe installation (+$80k)</strong> required for MRI safety compliance. Your current capital total is <strong>$2,730,000</strong>. Would you like a formal quote summary?"</p>
+            </div>
+        </section>
 
-<p><strong>User</strong>: Standard clinical use, mostly neuroimaging and orthopedics.</p>
+        <section id="scenario-2" style="margin-bottom: 50px;">
+            <h3 style="color: #0066FF; border-left: 5px solid #0066FF; padding-left: 15px;">Scenario 2: CT Scanner (Conflict Resolution)</h3>
+            
+            <div class="conversation-container" style="background: #f8f9fa; border-radius: 12px; padding: 25px; border: 1px solid #ddd;">
+                <p><strong>User:</strong> "We want the 256-slice CT scanner, but keep the Standard performance tier to save budget."</p>
+                
+                <div class="reasoning-box" style="background: #263238; color: #81d4fa; padding: 15px; border-radius: 8px; font-family: 'Courier New', monospace; font-size: 0.85rem; margin: 15px 0;">
+                    [Conflict_Detected]: 256-slice requires 'Premium Research' Tier. User requested 'Standard'.<br>
+                    [Resolution_Strategy]: Inform user of constraint + offer nearest valid alternative (128-slice / Advanced Tier).
+                </div>
 
-<p><strong>Agent</strong>: Great. Let's begin with the field strength. We offer 1.5T (standard) or 3T (higher resolution). 3T provides superior image quality but requires additional infrastructure. Which would you prefer?</p>
+                <p><strong>Agent:</strong> "I understand the budget focus. However, the <strong>256-slice scanner</strong> requires the technical infrastructure of the Premium Research tier. If we stay on a tighter budget, I recommend the <strong>128-slice configuration with the Advanced Tier</strong>. This still offers high-throughput for ER use but reduces the capital adder by 50%. How does that sound?"</p>
+            </div>
+        </section>
 
-<p><strong>User</strong>: Let's go with 3T.</p>
-
-<p><strong>Agent</strong>: Excellent choice for detail. Note that 3T systems require our Premium Research performance tier for optimal operation and safety features. Shall I upgrade the tier to Premium Research (+$600,000)?</p>
-
-<p><strong>User</strong>: Yes, that's fine.</p>
-
-<p><strong>Agent</strong>: Upgraded. Now for software packages — would you like to include our AI Diagnostics Suite? It automates detection of abnormalities and is adopted by 82% of facilities with 3T systems (+$250,000).</p>
-
-<p><strong>User</strong>: Yes, add that.</p>
-
-<p><strong>Agent</strong>: Added. For a 3T MRI, we always include a quench pipe for safety (+$80,000). Next, service level: Standard 1-year warranty is included, but most hospitals with 3T systems choose Premium Care with 24×7 support and preventive maintenance (+$180,000/year). Would you like to include that?</p>
-
-<p><strong>User</strong>: Yes.</p>
-
-<p><strong>Agent</strong>: Perfect. Here's your configuration summary:</p>
-<ul>
-  <li><strong>Modality</strong>: MRI (3T)</li>
-  <li><strong>Performance Tier</strong>: Premium Research (+$600,000)</li>
-  <li><strong>Software</strong>: AI Diagnostics Suite (+$250,000)</li>
-  <li><strong>Installation</strong>: Quench pipe (required, +$80,000)</li>
-  <li><strong>Service</strong>: Premium Care 3-year (+$180,000/year)</li>
-</ul>
-<p><strong>Total Capital Cost</strong>: $2,730,000<br>
-<strong>Annual Service</strong>: $180,000</p>
-
-<p>Would you like me to generate a formal quote PDF or connect you with a specialist?</p>
-
-<h2>Conversation 2: CT Scanner with Compatibility Violation & Corrective Guidance</h2>
-
-<p><strong>User</strong>: We need a new CT scanner for high-volume ER use.</p>
-
-<p><strong>Agent</strong>: Welcome! For high-throughput emergency imaging, CT is ideal. Let's select the slice count — options are 64-slice (standard), 128-slice, or 256-slice for ultra-fast cardiac imaging. Which interests you?</p>
-
-<p><strong>User</strong>: 256-slice please.</p>
-
-<p><strong>Agent</strong>: The 256-slice configuration delivers exceptional speed. However, it requires our Premium Research tier for full capability. Your current selection is Standard tier — shall I upgrade to Premium Research (+$600,000) to enable 256-slice?</p>
-
-<p><strong>User</strong>: No, let's stick with 128-slice then.</p>
-
-<p><strong>Agent</strong>: Smart choice for ER volume. 128-slice requires the Advanced tier — upgrading now (+$300,000).  
-Radiation shielding is mandatory for all CT systems (+$150,000).</p>
-
-<p>Would you like the Cardiac Analysis Module? It's particularly valuable for ER stroke and chest pain protocols (+$200,000).</p>
-
-<p><strong>User</strong>: Yes.</p>
-
-<p><strong>Agent</strong>: Added. Current build:</p>
-<ul>
-  <li><strong>Modality</strong>: CT Scanner (128-slice)</li>
-  <li><strong>Performance Tier</strong>: Advanced (+$300,000)</li>
-  <li><strong>Software</strong>: Cardiac Analysis Module (+$200,000)</li>
-  <li><strong>Installation</strong>: Radiation shielding (required, +$150,000)</li>
-</ul>
-<p><strong>Total</strong>: $1,850,000</p>
-
-<p>Most ER departments add our Uptime Guarantee SLA — shall I include it?</p>
-
-<h2>Conversation 3: Portable Ultrasound with Cross-Sell</h2>
-
-<p><strong>User</strong>: We're opening rural outreach clinics and need portable ultrasound systems.</p>
-
-<p><strong>Agent</strong>: Perfect use case. Let's configure a portable diagnostic ultrasound.</p>
-
-<p>First, performance tier — Portable is optimized for mobility (+$80,000 over standard).</p>
-
-<p>Software options: Basic imaging is included. Would you like our AI Diagnostics Suite for automated measurements and anomaly detection (+$250,000)?</p>
-
-<p><strong>User</strong>: Not right now.</p>
-
-<p><strong>Agent</strong>: Understood. For portable deployments, most customers add the Extended Battery & Transport Case package for reliable field use (+$25,000). Would you like to include that?</p>
-
-<p><strong>User</strong>: Yes, good idea.</p>
-
-<p><strong>Agent</strong>: Added. Since you're serving rural areas, would you like multiple units? We offer volume pricing starting at 3 systems.</p>
-
-<p><strong>User</strong>: Let's start with 2.</p>
-
-<p><strong>Agent</strong>: Configuration complete:</p>
-<ul>
-  <li><strong>Modality</strong>: Ultrasound (Portable tier)</li>
-  <li><strong>Add-ons</strong>: Extended Battery & Transport Case (+$25,000)</li>
-  <li><strong>Quantity</strong>: 2 units</li>
-</ul>
-<p><strong>Total</strong>: $660,000</p>
-
-<p>I can also include staff training packages tailored for rural outreach — interested?</p>
-
-<h2>Conversation 4: Research-Grade System with Proactive Research Upsell</h2>
-
-<p><strong>User</strong>: We're a university hospital starting a neuroimaging research program.</p>
-
-<p><strong>Agent</strong>: Excellent. For research-grade neuroimaging, our 3T MRI with Premium Research tier is ideal. Configuring now...</p>
-
-<p>The AI Diagnostics Suite and 3D Reconstruction modules are highly recommended for publication-quality work. Shall I include both (+$400,000 total)?</p>
-
-<p><strong>User</strong>: Yes.</p>
-
-<p><strong>Agent</strong>: Added. Most research institutions with this configuration add our Research Collaboration Portal for multi-site trial coordination (+$50,000/year). Would you like details?</p>
-
-<p><strong>User</strong>: Tell me more.</p>
-
-<p><strong>Agent</strong>: The portal enables secure data sharing, standardized protocols, and centralized analysis across collaborating institutions — proven to accelerate publication timelines by 30%. Shall I include access (+$50,000/year) in your quote?</p>
-
-<p>These sample conversations illustrate:</p>
-<ul>
-  <li>Natural, guided attribute selection</li>
-  <li>Real-time rule enforcement with corrective suggestions</li>
-  <li>Contextual upsell/cross-sell based on configuration</li>
-  <li>Dynamic pricing transparency</li>
-  <li>Professional quote summarization</li>
-</ul>
-
-<p>All behaviors are achievable through Dialogflow CX parameters, fulfillment webhook logic, and Vertex AI generative responses.</p>
-
-<div class="back">
-  <a href="index.html">← Back to Main Design</a>
-</div>
-
+        <section id="metrics-note" style="background-color: #e8f5e9; border: 1px solid #2e7d32; padding: 20px; border-radius: 8px; margin-top: 30px;">
+            <h4 style="margin-top: 0; color: #2e7d32;"><i class="fas fa-chart-line"></i> Strategic Alignment</h4>
+            <p style="font-size: 0.95rem; line-height: 1.6; margin-bottom: 0;">
+                By surfacing these reasoning steps, Omni-CCAI ensures <strong>SOX-compliant traceability</strong> for every quote generated. This prevents "Black Box" errors in regulated medical sales and provides the CFO's office with an immutable audit trail of why specific add-ons were included.
+            </p>
+        </section>
+    </div>
 </body>
 </html>

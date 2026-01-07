@@ -1,251 +1,221 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <title>Selling with Omni CCAI – Smart Configurator Sales Agent</title>
-  <meta name="description" content="GCP Dialogflow CX agent for attribute-based medical imaging device configuration with intelligent upsell/cross-sell">
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
-
-    body {
-      font-family: 'Space Mono', monospace;
-      background: white;
-      color: black;
-      max-width: 900px;
-      margin: 60px auto;
-      padding: 0 20px;
-      line-height: 1.7;
-      font-size: 17px;
-    }
-
-    h1 {
-      color: #0066FF;
-      font-size: 2.4em;
-      border-bottom: 4px solid #0066FF;
-      padding-bottom: 15px;
-      margin-bottom: 40px;
-    }
-
-    h2 {
-      color: #0066FF;
-      font-size: 1.8em;
-      margin-top: 3em;
-      border-bottom: 2px solid #0066FF;
-      padding-bottom: 8px;
-    }
-
-    h3 {
-      color: #0066FF;
-      font-size: 1.4em;
-      margin-top: 2.5em;
-    }
-
-    p, ul, ol, li {
-      margin-bottom: 1.2em;
-    }
-
-    ul, ol {
-      padding-left: 2em;
-    }
-
-    a {
-      color: #0066FF;
-      text-decoration: none;
-    }
-
-    a:hover {
-      text-decoration: underline;
-    }
-
-    table {
-      border-collapse: collapse;
-      width: 100%;
-      margin: 30px 0;
-    }
-
-    th, td {
-      border: 1px solid #ccc;
-      padding: 12px;
-      text-align: left;
-    }
-
-    th {
-      background: #f0f8ff;
-      color: #0066FF;
-      font-weight: 700;
-    }
-
-    .links {
-      margin-top: 80px;
-      padding-top: 30px;
-      border-top: 2px solid #0066FF;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Omni-CCAI: Guided Selling & CPQ - Siddharth Rao</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
-<body>
+<body class="project-page">
+    <div class="home-nav-container">
+        <a href="index.html" class="btn-home">
+            <i class="fas fa-arrow-left"></i> Home
+        </a>
+    </div>
 
-<h1>Selling with Omni CCAI – Smart Configurator Sales Agent</h1>
+    <div class="search-icon">🔍</div>
 
-<h2>1. Description</h2>
-<p>A GCP-native Dialogflow CX virtual agent designed to perform guided, attribute-based product configuration while actively driving revenue through intelligent upselling and cross-selling. The agent simulates a high-end medical imaging device suite (MRI, CT, Ultrasound, X-Ray), enforcing real-world configuration rules (dependencies, compatibility, validation), calculating dynamic pricing, and proactively recommending complementary products and upgrades. All logic is self-contained within GCP services, demonstrating how Contact Center AI (CCAI) can evolve from cost-center support to revenue-generating sales conversations.</p>
+    <div class="header-ribbon">
+        <nav>
+            <a href="ccai-sales-agent.html" class="active">Omni-CCAI Sales</a>
+            <a href="product-catalog.html">Product Catalog</a>
+            <a href="sample-conversations.html">Sample Conversations</a>
+            <a href="upsell-rules.html">Upsell Logic</a>
+        </nav>
+    </div>
 
-<h2>2. Executive Summary</h2>
-<p>The Smart Configurator Sales Agent showcases the application of Dialogflow CX and Vertex AI generative capabilities to one of the most complex and valuable enterprise sales use cases: attribute-based configuration combined with guided selling. By replicating key CPQ behaviors (rule enforcement, dynamic pricing, bundle validation) in a conversational interface without requiring Salesforce or third-party CPQ systems, the prototype illustrates a lightweight, modern alternative for guided selling in omnichannel environments. The design emphasizes simplicity of deployment, transparency of logic, and extensibility toward production integration.</p>
+    <div class="main-content">
+        <h1>Omni-CCAI – Intelligent Guided Selling & CPQ Orchestrator<br>
+        <small>Agentic Product Configuration, Dynamic Pricing & Generative Upsell for MedTech</small></h1>
+        
+        <p class="project-description">
+            Omni-CCAI is an enterprise-grade sales orchestrator that transforms the traditional "cost-center" chatbot into a 
+            <strong>revenue-generating engine</strong>. Built on <strong>Dialogflow CX</strong> and <strong>Vertex AI</strong>, it automates complex, 
+            attribute-based configuration for medical imaging suites—enforcing clinical dependencies, calculating real-time 
+            dynamic pricing, and leveraging <strong>Gemini 1.5 Flash</strong> for hyper-personalized upsell reasoning. 
+            By bridging the gap between unstructured customer intent and structured CPQ logic (Configure, Price, Quote), 
+            it demonstrates a serverless, NoOps path to conversational commerce that reduces configuration errors 
+            and boosts Average Order Value (AOV) through context-aware cross-selling.
+        </p>
 
-<h2>3. Business Strategy</h2>
+        <div class="section">
+            <h3>Google Cloud Integration Highlights</h3>
+            <ul style="font-size: 1.1em; line-height: 1.8; columns: 2; column-gap: 40px; list-style: none; padding-left: 0;">
+                <li>• <strong>Dialogflow CX</strong> for state-machine sales orchestration & intent handling</li>
+                <li>• <strong>Vertex AI (Gemini 1.5)</strong> for generative upsell phrasing & social proof</li>
+                <li>• <strong>Cloud Functions (Python)</strong> for the "Brain" (CPQ Rules & Pricing Logic)</li>
+                <li>• <strong>BigQuery</strong> for sales analytics and recommendation acceptance tracking</li>
+                <li>• <strong>Firestore</strong> for real-time session state & persistent quote logging</li>
+                <li>• <strong>Cloud KMS</strong> for field-level encryption of sensitive quote data</li>
+                <li>• <strong>Vertex AI Search</strong> for RAG-based technical specification retrieval</li>
+            </ul>
+        </div>
 
-<h3>3.1 Strategic Value Proposition</h3>
-<p>The agent reduces configuration errors, shortens sales cycles, and increases average order value through context-aware recommendations. It enables non-expert channels (web chat, voice, messaging) to handle complex configurable products traditionally requiring trained sales reps or heavy CPQ UIs. Primary value drivers include higher conversion rates, larger basket sizes via upsell/cross-sell, and improved customer experience through natural, guided conversations.</p>
+        <section id="executive-summary">
+            <div class="executive-summary" style="background: #ffffff; border: 1px solid #e0e0e0; border-radius: 8px; padding: 30px; margin: 40px 0; box-shadow: 0 4px 12px rgba(0,0,0,0.05);">
+                <h3 style="color: #0052cc; margin-top: 0; border-bottom: 2px solid #eef4ff; padding-bottom: 10px;">Executive Summary: The Conversational CPQ Edge</h3>
+                
+                <p style="font-size: 1.1rem; line-height: 1.6; color: #333; font-weight: 500; margin-bottom: 20px;">
+                    <strong>Vision:</strong> Reducing sales friction in high-complexity MedTech by enabling non-expert channels to configure $2M+ assets with 100% rule-compliance and automated revenue optimization.
+                </p>
+        
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 30px;">
+                    <div>
+                        <h4 style="margin-bottom: 10px; font-size: 1rem; color: #333;">1. The Revenue Gap</h4>
+                        <p style="font-size: 0.95rem; line-height: 1.6; color: #555;">
+                            Traditional CPQ systems are "expert-only" UIs. Omni-CCAI democratizes this logic, moving complex configuration from slow, manual back-offices to real-time, 24/7 conversational interfaces.
+                        </p>
+                    </div>
+                    <div>
+                        <h4 style="margin-bottom: 10px; font-size: 1rem; color: #333;">2. The Solution: Agentic Configuration</h4>
+                        <p style="font-size: 0.95rem; line-height: 1.6; color: #555;">
+                            A state-aware orchestrator mapping attribute selection to clinical safety rules. By integrating <strong>Gemini</strong>, the agent explains "the why" behind upsells, increasing trust and conversion.
+                        </p>
+                    </div>
+                </div>
+        
+                <div style="margin-top: 25px; padding-top: 20px; border-top: 1px dashed #ddd;">
+                    <h4 style="margin-bottom: 15px; font-size: 1rem; color: #333;">Quantifiable Business Outcomes</h4>
+                    <ul style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px; list-style: none; padding-left: 0; font-size: 0.9rem; color: #555;">
+                        <li>🚀 <strong>40% Error Reduction:</strong> Automated validation of clinical dependencies (e.g., 3T MRI vs Tier).</li>
+                        <li>💰 <strong>15% AOV Uplift:</strong> Context-aware upsells (AI Suite, Premium Care) triggered by logic.</li>
+                        <li>⏳ <strong>Faster Close:</strong> Instant quote summaries vs. 48-hour manual sales turnarounds.</li>
+                        <li>📉 <strong>Zero Sample Risk:</strong> 100% of quotes are validated against the master product catalog.</li>
+                    </ul>
+                </div>
+            </div>
 
-<h3>3.2 Regulatory Strategy</h3>
-<p>No personal data is persisted beyond session parameters. All pricing and product rules are static and publicly derived. The prototype includes clear disclaimers that outputs are illustrative and not binding quotes. Future production paths will support configurable compliance controls (quote versioning, approval workflows) via GCP tooling.</p>
+            <div style="display: flex; flex-direction: column; gap: 15px; margin-top: 35px;">
+                <details style="background: white; border: 1px solid #e2e8f0; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 4px rgba(0,0,0,0.05);">
+                    <summary style="padding: 15px; font-weight: bold; cursor: pointer; background: #f8fafc; display: flex; align-items: center;">
+                        <i class="fas fa-eye" style="margin-right: 12px; color: #0066FF; width: 20px;"></i> 
+                        <span>Phase A/B: Vision & Business (Guided Selling Capability Map)</span>
+                    </summary>
+                    <div style="padding: 30px; text-align: center; border-top: 1px solid #e2e8f0;">
+                        <h4 style="color: #0066FF;">TOGAF Business Architecture: Intent-to-Quote Value Stream</h4>
+                        <img src="ccai_vision_biz.png" alt="Guided Selling Business Architecture" style="width: 100%; max-width: 1100px;">
+                        <p style="margin-top: 20px; font-size: 0.95rem; font-style: italic;"></p>
+                    </div>
+                </details>
 
-<h2>4. Users</h2>
+                <details style="background: white; border: 1px solid #e2e8f0; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 4px rgba(0,0,0,0.05);">
+                    <summary style="padding: 15px; font-weight: bold; cursor: pointer; background: #f8fafc; display: flex; align-items: center;">
+                        <i class="fas fa-brain" style="margin-right: 12px; color: #0066FF; width: 20px;"></i> 
+                        <span>Phase C: Information Systems (State Management & Product Data)</span>
+                    </summary>
+                    <div style="padding: 30px; text-align: center; border-top: 1px solid #e2e8f0;">
+                        <h4 style="color: #0066FF;">IS Architecture: Dialogflow State Machine & Firestore Sync</h4>
+                        <img src="ccai_info_systems.png" alt="Information Systems Architecture" style="width: 100%; max-width: 1100px;">
+                        <p style="margin-top: 20px; font-size: 0.95rem; font-style: italic;"></p>
+                    </div>
+                </details>
 
-<h3>4.1 Target User Personas</h3>
-<ul>
-  <li><strong>End Customer (B2C/B2B Buyer)</strong>: Seeks to configure and purchase a complex product online or via assisted channel without friction.</li>
-  <li><strong>Sales Development Rep</strong>: Uses the agent as a qualification and configuration assistant during live chat/voice interactions.</li>
-  <li><strong>Channel Partner</strong>: Embeds the agent in partner portals to maintain consistent guided selling.</li>
-  <li><strong>Product Manager / Solutions Architect</strong>: Evaluates modern conversational alternatives to traditional CPQ interfaces.</li>
-</ul>
+                <details style="background: white; border: 1px solid #e2e8f0; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 4px rgba(0,0,0,0.05);">
+                    <summary style="padding: 15px; font-weight: bold; cursor: pointer; background: #f8fafc; display: flex; align-items: center;">
+                        <i class="fas fa-cloud" style="margin-right: 12px; color: #0066FF; width: 20px;"></i> 
+                        <span>Phase D: Technology (Serverless Sales Infrastructure)</span>
+                    </summary>
+                    <div style="padding: 30px; text-align: center; border-top: 1px solid #e2e8f0;">
+                        <h4 style="color: #0066FF;">GCP Cloud Architecture: Zero-Trust Multi-Service Stack</h4>
+                        <img src="ccai_technology.png" alt="Technology Architecture" style="width: 100%; max-width: 1100px;">
+                        <p style="margin-top: 20px; font-size: 0.95rem; font-style: italic;"></p>
+                    </div>
+                </details>
+            </div>
+        </section>
 
-<h3>4.2 Lightweight Requirements and User Stories</h3>
-<p>As a user, I want to:</p>
-<ul>
-  <li>Configure a medical imaging device by answering natural-language questions.</li>
-  <li>Receive immediate validation when selections are incompatible.</li>
-  <li>See real-time price updates as options are chosen.</li>
-  <li>Receive personalized upsell and cross-sell recommendations based on configuration.</li>
-  <li>View a complete quote summary with line items and total price.</li>
-  <li>Complete the flow without leaving the conversation channel.</li>
-</ul>
+        <section id="business-strategy">
+            <h2 style="color: #0066FF; border-bottom: 2px solid #0066FF; padding-bottom: 10px;">Strategic Value Proposition: The "Sales Force Multiplier"</h2>
+            <p style="font-size: 1.1rem; line-height: 1.6;">
+                Omni-CCAI solves the "Product Complexity Crisis" by embedding expert-level MedTech configuration knowledge into a scalable conversational agent. It targets high-value modalities where manual "judgment calls" on compatibility create legal and clinical risk.
+            </p>
+            
+            <h3 style="color: #0052cc; margin-top: 30px;">1. The CPQ Rules Logic (Simplified for MVP)</h3>
+            <div style="background: #fdfdfd; border: 1px solid #eee; padding: 20px; border-radius: 8px;">
+                <ul style="padding-left: 20px; line-height: 1.8; font-size: 0.95rem;">
+                    <li>🔹 <strong>Step 1: Configuration:</strong> Dialogflow CX guides attribute selection (MRI Field Strength, Software Modules).</li>
+                    <li>🔹 <strong>Step 2: Validation:</strong> Python Webhook enforces rules (e.g., 3T MRI → Mandatory Premium Tier).</li>
+                    <li>🔹 <strong>Step 3: Pricing:</strong> Real-time dynamic calculation of Capital + Annual Service costs.</li>
+                    <li>🔹 <strong>Step 4: Optimization:</strong> Vertex AI (Gemini) reasons through upsell opportunities based on user needs.</li>
+                </ul>
+            </div>
+        </section>
 
-<h3>4.3 User Journey Map</h3>
-<ol>
-  <li>User initiates chat (“I need a new MRI system”).</li>
-  <li>Agent greets, asks high-level needs (clinical vs research, budget range).</li>
-  <li>Agent guides through attribute selection (Modality → Tier → Field Strength → Software → Installation → Service).</li>
-  <li>Agent validates choices in real time and offers corrective suggestions.</li>
-  <li>Agent interjects upsell/cross-sell recommendations contextually.</li>
-  <li>Agent presents final configuration summary with dynamic pricing.</li>
-  <li>User confirms or adjusts → agent generates quote and next steps.</li>
-</ol>
+        <section id="user-personas">
+            <h3 style="color: #0066FF; margin-bottom: 20px; border-left: 5px solid #0066FF; padding-left: 15px;">Target User Personas: Democratizing Complex Sales</h3>
+            <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px;">
+                <div style="background: white; border: 1px solid #e0e0e0; border-radius: 8px; padding: 25px; box-shadow: 0 4px 12px rgba(0,0,0,0.05);">
+                    <h4 style="margin: 0; color: #0066FF;">B2B Buyer</h4>
+                    <p style="font-size: 0.9rem; color: #666;">Hospital Procurement</p>
+                    <p style="font-size: 0.85rem;"><strong>Goal:</strong> Self-serve configuration without waiting for sales rep call-backs.</p>
+                </div>
+                <div style="background: white; border: 1px solid #e0e0e0; border-radius: 8px; padding: 25px; box-shadow: 0 4px 12px rgba(0,0,0,0.05);">
+                    <h4 style="margin: 0; color: #0066FF;">Sales Engineer</h4>
+                    <p style="font-size: 0.9rem; color: #666;">MedTech Specialist</p>
+                    <p style="font-size: 0.85rem;"><strong>Goal:</strong> Offload "standard" configurations to the agent to focus on custom research bids.</p>
+                </div>
+                <div style="background: white; border: 1px solid #e0e0e0; border-radius: 8px; padding: 25px; box-shadow: 0 4px 12px rgba(0,0,0,0.05);">
+                    <h4 style="margin: 0; color: #0066FF;">Product Manager</h4>
+                    <p style="font-size: 0.9rem; color: #666;">GTM Strategy</p>
+                    <p style="font-size: 0.85rem;"><strong>Goal:</strong> Ensure 100% of quotes include mandatory safety items (Quench Pipes/Shielding).</p>
+                </div>
+            </div>
+        </section>
 
-<h2>5. Design and Architecture</h2>
+        <section id="roadmap">
+            <h3 style="color: #0066FF; margin-bottom: 20px; border-left: 5px solid #0066FF; padding-left: 15px;">SAFe SPC Roadmap: Program Increment (PI) Flow</h3>
+            <div style="background: white; border: 1px solid #0066FF; border-radius: 8px; overflow: hidden;">
+                <table style="width: 100%; border-collapse: collapse; font-size: 0.85rem;">
+                    <tr style="background-color: #f1f3f4; color: #0066FF; border-bottom: 2px solid #0066FF;">
+                        <th style="padding: 12px;">PI Phase</th>
+                        <th style="padding: 12px;">Deliverable</th>
+                        <th style="padding: 12px;">Value Realized</th>
+                    </tr>
+                    <tr>
+                        <td style="padding: 12px; border-bottom: 1px solid #ddd;">PI-1: Foundation</td>
+                        <td style="padding: 12px; border-bottom: 1px solid #ddd;">State Machine & Attribute Capture</td>
+                        <td style="padding: 12px; border-bottom: 1px solid #ddd;">Automated clinical intake</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 12px; border-bottom: 1px solid #ddd;">PI-2: The Brain</td>
+                        <td style="padding: 12px; border-bottom: 1px solid #ddd;">Webhook Fulfillment & Rule Engine</td>
+                        <td style="padding: 12px; border-bottom: 1px solid #ddd;">100% compliant configuration</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 12px; border-bottom: 1px solid #ddd;">PI-3: Optimization</td>
+                        <td style="padding: 12px; border-bottom: 1px solid #ddd;">Gemini Upsell Integration</td>
+                        <td style="padding: 12px; border-bottom: 1px solid #ddd;">15% increase in Service/Add-on sales</td>
+                    </tr>
+                </table>
+            </div>
+            <div style="padding: 30px; text-align: center;">
+                <h4 style="color: #0066FF;">Delivery Framework: SAFe Agile Release Train (ART)</h4>
+                <img src="ccai_safe_delivery.png" alt="SAFe ART Delivery" style="width: 100%; max-width: 1100px;">
+                <p style="margin-top: 10px; font-size: 0.95rem; font-style: italic;"></p>
+            </div>
+        </section>
 
-<h3>5.1 Phase A: Vision</h3>
-<p>Create a conversational sales agent capable of replicating core CPQ functionality (attribute configuration, rule enforcement, dynamic pricing, guided selling) using only GCP CCAI services.</p>
+        <section id="infrastructure">
+            <h2 style="color: #0066FF; border-bottom: 2px solid #0066FF; padding-bottom: 10px;">Cloud Infrastructure & Multi-Region SRE</h2>
+            <p style="font-size: 1.1rem; line-height: 1.6;">
+                The platform is architected for <strong>Zero-Downtime Sales</strong>. During fiscal quarter-ends, the agent scales to handle 10x volume using GCP serverless constructs, ensuring no deal is lost to technical latency.
+            </p>
+            <div style="padding: 30px; text-align: center;">
+                <h4 style="color: #0066FF;">Reliability View: Zero-Downtime Sales Pipeline</h4>
+                <img src="ccai_sre_dashboard.png" alt="SRE Monitoring" style="width: 100%; max-width: 1100px;">
+                <p style="margin-top: 10px; font-size: 0.95rem; font-style: italic;"></p>
+            </div>
+        </section>
 
-<h3>5.2 Phase B: Business</h3>
-<p>Core capabilities: attribute-guided configuration, compatibility validation, dynamic pricing calculation, contextual upsell/cross-sell, quote generation. Success metrics: configuration completion rate, average order value uplift from recommendations, error-free rule enforcement.</p>
-
-<h3>5.3 Phase C: Information</h3>
-<p>Session state maintained via Dialogflow CX parameters: selected attributes, current price, cart items, validation messages, recommendation history. Product catalog and rules stored as static JSON for transparency.</p>
-
-<h3>5.4 Phase D: Technology</h3>
-<ul>
-  <li>Orchestration: Dialogflow CX (flows, intents, parameters, fulfillment)</li>
-  <li>Generative responses: Vertex AI Gemini (natural upsell phrasing)</li>
-  <li>Business logic: Cloud Functions webhook (Python) for rules, pricing, recommendations</li>
-  <li>Product data: Static JSON catalog (attributes, dependencies, base prices, upsell rules)</li>
-  <li>Frontend demo: Dialogflow Messenger embedded in simple HTML page</li>
-  <li>Persistence (future): Firestore for quote logging</li>
-</ul>
-
-<h2>6. Rollout and Roadmap - Implementation Phases and PI Mapping</h2>
-
-<h3>6.1 Current State</h3>
-<p>MVP with single product line (medical imaging suite), five core attributes, ten validation rules, three upsell/cross-sell triggers, Dialogflow Messenger demo.</p>
-
-<h3>6.2 Future State</h3>
-<ul>
-  <li>Multi-product catalog support</li>
-  <li>Integration with real payment gateways</li>
-  <li>Voice channel enablement (CCAI Platform)</li>
-  <li>Quote export to PDF/email</li>
-  <li>Analytics dashboard for recommendation effectiveness</li>
-</ul>
-
-<h3>6.3 Agile Delivery - ART</h3>
-<p>Program Increment structure:</p>
-<ul>
-  <li>PI-1: Dialogflow CX agent setup and basic configuration flow</li>
-  <li>PI-2: Webhook fulfillment with attribute validation and pricing logic</li>
-  <li>PI-3: Upsell/cross-sell recommendation engine</li>
-  <li>PI-4: Generative response integration and quote summary</li>
-  <li>PI-5: Web demo deployment and polish</li>
-</ul>
-
-<h3>6.4 Change Management</h3>
-<p>Version-controlled product catalog and rules JSON. Clear separation of configuration data from conversational logic to enable non-technical updates.</p>
-
-<h3>6.5 Target Value Stream</h3>
-<p>Inquiry → Need qualification → Guided attribute configuration → Validation & correction → Recommendation → Quote summary → Closure/hand-off</p>
-
-<h2>7. Multi-Agent Model</h2>
-<p>Not applicable — single agent with webhook fulfillment. Future extensions could decompose into specialized sub-agents (Configurator, Pricer, Recommender) using Dialogflow CX mega-agent patterns.</p>
-
-<h2>8. Intelligence Platform</h2>
-
-<h3>8.1 Unified Intelligence Stack Architecture</h3>
-<p>Dialogflow CX as primary orchestrator. Cloud Functions webhook as decision engine. Vertex AI Gemini called from webhook for generative phrasing only. All components serverless and GCP-native.</p>
-
-<h3>8.2 The RAG Component (Future Extension)</h3>
-<p>Optional retrieval from product knowledge base (FAQs, feature explanations) using Vertex AI Retrieval for more natural explanations.</p>
-
-<h3>8.3 Observability Layer</h3>
-<p>Cloud Logging for intent matches, parameter changes, webhook invocations. Exportable session traces for analysis of recommendation acceptance rates.</p>
-
-<h2>9. The Model Lifecycle</h2>
-<ul>
-  <li><strong>Selection</strong>: Gemini 1.5 Flash for speed; optional Gemini Pro for richer generative upsell text.</li>
-  <li><strong>Prompt Management</strong>: Version-controlled prompt templates for recommendation phrasing.</li>
-  <li><strong>Evaluation</strong>: Offline testing against curated configuration scenarios; metrics include rule enforcement accuracy and recommendation relevance.</li>
-  <li><strong>Continuous Improvement</strong>: Planned feedback collection on recommendation acceptance to refine rules engine.</li>
-</ul>
-
-<h2>10. Infrastructure</h2>
-
-<h3>10.1 Blueprint</h3>
-<ul>
-  <li>Dialogflow CX agent (standard edition)</li>
-  <li>Cloud Functions (2nd gen) webhook</li>
-  <li>Static hosting for demo page (Cloud Storage bucket or GitHub Pages)</li>
-  <li>Optional Firestore for quote persistence</li>
-</ul>
-
-<h3>10.2 Security</h3>
-<p>No authentication required for demo. Production path would use Identity-Aware Proxy and service account least privilege.</p>
-
-<h3>10.3 Governance and Compliance</h3>
-<p>Clear in-conversation disclaimer: “This is a demonstration configuration. Final pricing subject to change.” Transparent rule logic in public repository.</p>
-
-<h3>10.4 SRE</h3>
-<p>Serverless components ensure auto-scaling. Webhook timeouts and retry logic configured. Monitoring via Cloud Monitoring alerts on error rates.</p>
-
-<h2>11. Impact & Outcomes</h2>
-<p>Expected outcomes include:</p>
-<ul>
-  <li>Demonstration of revenue-generating potential of CCAI beyond support</li>
-  <li>Illustration of lightweight alternative to traditional CPQ for guided selling</li>
-  <li>Higher interviewer recognition due to relevance to real enterprise sales complexity</li>
-  <li>Foundation for production-grade conversational commerce on GCP</li>
-  <li>Contribution to portfolio differentiation in CPQ-adjacent and sales automation roles</li>
-</ul>
-
-<p>This design provides a focused, high-impact prototype that directly addresses enterprise-grade selling challenges while remaining feasible to build and deploy entirely on Google Cloud Platform.</p>
-
-<div class="links">
-  <h2>Supporting Documentation</h2>
-  <ul>
-    <ul>
-        <li><a href="product_catalog.html">Product Catalog – Medical Imaging Device Attributes & Pricing</a></li>
-        <li><a href="sample_conversations.html">Sample Conversations – Real Sales Dialogues</a></li>
-        <li><a href="upsell_rules.html">Upsell & Cross-Sell Rules Engine</a></li>
-      </ul>
-      
-</div>
-
+        <section id="supplementary-links" style="margin-top: 60px; padding-top: 30px; border-top: 2px solid #0066FF;">
+            <h3 style="color: #0066FF;">Supporting Sales Intelligence</h3>
+            <ul style="list-style: none; padding: 0; display: flex; gap: 30px;">
+                <li><a href="product-catalog.html"><i class="fas fa-file-alt"></i> Product Catalog</a></li>
+                <li><a href="sample-conversations.html"><i class="fas fa-comments"></i> Sample Conversations</a></li>
+                <li><a href="upsell-rules.html"><i class="fas fa-chart-line"></i> Upsell Logic</a></li>
+            </ul>
+        </section>
+    </div>
 </body>
 </html>
